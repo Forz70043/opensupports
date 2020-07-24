@@ -400,65 +400,65 @@ class MailTexts {
         ],
         'it' => [
           'USER_SIGNUP' => [
-              'Sei iscritto {{to}} - OpenSupports',
+              'Sei iscritto {{to}} - Supporto Clipper',
               'Verifica il tuo account',
               'Benvenuto, {{name}}!. Devi verificare questa email per accedere al tuo account.',
               'Clicca sul link {{url}}/verify-token/{{to}}/{{verificationToken}} o clicca sul pulsante qui sotto.',
           ],
           'USER_PASSWORD' => [
-              'Password modificata - OpenSupports',
+              'Password modificata - Supporto Clipper',
               'Password modificata',
               'Ciao, {{name}}. Vogliamo informarti che la tua password è stata modificata dal tuo pannello di controllo.'
           ],
           'USER_EMAIL' => [
-              'E-mail modificata - OpenSupports',
+              'E-mail modificata - Supporto Clipper',
               'L\'email è stata modificata',
               'Ciao, {{name}}. Vogliamo informarti che la tua email è stata modificata {{newemail}} dal tuo pannello di controllo.'
           ],
           'PASSWORD_FORGOT' => [
-              'Recupera la password - OpenSupports',
+              'Recupera la password - Supporto Clipper',
               'Recupera password',
               'Ciao, {{name}}. Hai richiesto di recuperare la tua password.',
               'Clicca sul link {{url}}/recover-password?email={{to}}&token={{token}} o clicca sul pulsante qui sotto.',
           ],
           'USER_INVITE' => [
-              'Sei stato invitato - OpenSupports',
+              'Sei stato invitato - Supporto Clipper',
               'Sei stato invitato',
               'Ciao, {{name}}. Sei stato invitato a far parte del nostro centro di supporto.',
               'Usa questo codice in {{url}}/recover-password?email={{to}}&token={{token}}&invited=true oppure fai clic sul pulsante in basso per impostare la password.'
           ],
           'USER_SYSTEM_DISABLED' => [
-              'Il sistema di accesso è cambiato - OpenSupports',
+              'Il sistema di accesso è cambiato - Supporto Clipper',
               'Modifica sistema di accesso',
               'Ciao, {{name}}. Il sistema di accesso ai tuoi tickets è cambiato.',
               'Puoi accedere ai tuoi ticket usando la tua email e il numero del ticket.Clicca sul bottone qui sotto per vedere i tuoi tickets.',
           ],
           'USER_SYSTEM_ENABLED' => [
-              'Account creato - OpenSupports',
+              'Account creato - Supporto Clipper',
               'Account creato',
               'Ciao, {{name}}. Abbiamo creato il tuo account.',
               ' Puoi accedere al tuo account utilizzando questa email <i>({{to}})</i> e la password qui sotto.Ti consigliamo di cambiare la password dopo il primo accesso.',
           ],
           'TICKET_CREATED' => [
-              '#{{ticketNumber}} ticket creato - OpenSupports',
+              '#{{ticketNumber}} ticket creato - Supporto Clipper',
               'Ticket inviato',
               'Ciao, {{name}}. Hai inviato un nuovo ticket <i>{{title}}</i> al nostro centro si assistenza.',
               'È possibile accedere al ticket attraverso il numero del ticket. Oppure puoi cliccare sul bottone qui sotto.',
           ],
           'TICKET_RESPONDED' => [
-              '#{{ticketNumber}} Ticket risposto - OpenSupports',
+              '#{{ticketNumber}} Ticket risposto - Supporto Clipper',
               'Risposta al tuo ticket',
               'Ciao, {{name}}. Hai ricevuto una risposta al tuo ticket <i>{{title}}</i>.',
               'Clicca qui sotto per leggere la risposta.'
           ],
           'TICKET_CLOSED' => [
-              '#{{ticketNumber}} Ticket chiuso - OpenSupports',
+              '#{{ticketNumber}} Ticket chiuso - Supporto Clipper',
               'Ticket chiuso',
               'Ciao, {{name}}. Il ticket che hai inviato <i>{{title}}</i> è stato chiuso.',
               'È possibile accedere al ticket attraverso il numero del ticket. Oppure puoi cliccare sul bottone qui sotto.'
           ],
           'TICKET_CREATED_STAFF' => [
-              '#{{ticketNumber}} Ticket creato - OpenSupports',
+              '#{{ticketNumber}} Ticket creato - Supporto Clipper',
               'Ticket inviato',
               'l\'utente {{name}} ha creato un nuovo titolo dal titolo <i>{{title}}</i>',
               'È possibile accedere al ticket con il suo numero di ticket.',
