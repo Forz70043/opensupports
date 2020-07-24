@@ -75,13 +75,23 @@ class AdminPanelListUsers extends React.Component {
         return [
             {
                 key: 'name',
-                value: i18n('NAME'),
+                value: i18n('R_SOCIALE'),
                 className: 'admin-panel-list-users__table-name col-md-3'
+            },
+            {
+                key: 'piva',
+                value: i18n('P_IVA'),
+                className: 'admin-panel-list-users__table-email col-md-2'
             },
             {
                 key: 'email',
                 value: i18n('EMAIL'),
-                className: 'admin-panel-list-users__table-email col-md-5'
+                className: 'admin-panel-list-users__table-email col-md-3'
+            },
+            {
+                key: 'phone',
+                value: i18n('PHONE_NUMBER'),
+                className: 'admin-panel-list-users__table-email col-md-2'
             },
             {
                 key: 'tickets',
@@ -90,14 +100,6 @@ class AdminPanelListUsers extends React.Component {
                 order: true,
                 onOrderUp: this.orderByTickets.bind(this, 0),
                 onOrderDown: this.orderByTickets.bind(this, 1)
-            },
-            {
-                key: 'signupDate',
-                value: i18n('SIGNUP_DATE'),
-                className: 'admin-panel-list-users__table-date col-md-2',
-                order: true,
-                onOrderUp: this.orderById.bind(this, 0),
-                onOrderDown: this.orderById.bind(this, 1)
             }
         ];
     }
@@ -112,13 +114,14 @@ class AdminPanelListUsers extends React.Component {
                     {user.disabled ? this.renderDisabled() : null}
                 </div>
             ),
+            piva: user.piva,
             email: user.email,
+            phone: user.phone,
             tickets: (
                 <span className="admin-panel-list-users__tickets-number">
                     {user.tickets}
                 </span>
-            ),
-            signupDate: DateTransformer.transformToString(user.signupDate, false)
+            )
         };
     }
 
