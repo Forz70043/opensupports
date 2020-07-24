@@ -452,6 +452,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `piva` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `signup_date` double DEFAULT NULL,
   `tickets` int(11) unsigned DEFAULT NULL,
   `verification_token` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
