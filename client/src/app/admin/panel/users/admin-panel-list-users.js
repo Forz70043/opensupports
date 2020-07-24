@@ -80,7 +80,7 @@ class AdminPanelListUsers extends React.Component {
             },
             {
                 key: 'piva',
-                value: i18n('P_IVA'),
+                value: i18n('PIVA'),
                 className: 'admin-panel-list-users__table-email col-md-2'
             },
             {

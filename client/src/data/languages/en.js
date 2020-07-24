@@ -2,7 +2,7 @@ export default {
     'WELCOME': 'Welcome',
     'TICKETS': 'Tickets',
     'ARTICLES': 'Articles',
-    'R_SOCIALE':'Busin. Name',
+    'R_SOCIALE':'Business Name',
     'PIVA': 'Vat Num',
     'PHONE_NUMBER': 'Phone Num',
     'ACCOUNT': 'Account',

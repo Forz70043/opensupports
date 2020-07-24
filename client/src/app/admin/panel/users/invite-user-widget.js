@@ -45,8 +45,10 @@ class InviteUserWidget extends React.Component {
                 <Header title={i18n('INVITE_USER')} description={i18n('INVITE_USER_VIEW_DESCRIPTION')} />
                 <Form {...this.getFormProps()}>
                     <div className="invite-user-widget__inputs">
-                        <FormField {...this.getInputProps()} label={i18n('FULL_NAME')} name="name" validation="NAME" required/>
+                        <FormField {...this.getInputProps()} label={i18n('R_SOCIALE')} name="name" validation="NAME" required/>
+                        <FormField {...this.getInputProps()} label={i18n('PIVA')} name="piva" validation="NAME" required/>
                         <FormField {...this.getInputProps()} label={i18n('EMAIL')} name="email" validation="EMAIL" required/>
+                        <FormField {...this.getInputProps()} label={i18n('PHONE_NUMBER')} name="phone" validation="NAME" required/>
                         {this.state.customFields.map(this.renderCustomField.bind(this))}
                     </div>
                     <div className="invite-user-widget__captcha">

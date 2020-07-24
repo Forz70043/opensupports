@@ -24,10 +24,10 @@
 
     &_checked {
         .checkbox__icon {
-            color: $primary-red;
+            color: $clipper-blu-dark;
 
             &:focus {
-                color: lighten($primary-red, 5%);;
+                color: lighten($clipper-blu-dark, 5%);;
             }
         }
     }
