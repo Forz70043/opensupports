@@ -39,6 +39,8 @@ class InviteUserController extends Controller {
 
     private $userEmail;
     private $userName;
+    private $phone;
+    private $piva;
 
     public function validations() {
         $validations = [
@@ -51,7 +53,15 @@ class InviteUserController extends Controller {
                 'email' => [
                     'validation' => DataValidator::email(),
                     'error' => ERRORS::INVALID_EMAIL
-                ]
+                ]/*,
+                'piva' =>[
+                    'validation'=>DataValidator::notBlank(),
+                    'error' =>ERRORS::INVALID_NAME,
+                ],
+                'phone'=>[
+                    'validation'=>DataValidator::notBlank(),
+                    'error'=>ERRORS::INVALID_NAME,
+                ]*/
             ]
         ];
 
@@ -95,7 +105,9 @@ class InviteUserController extends Controller {
 
         Response::respondSuccess([
             'userId' => $userId,
-            'userEmail' => $this->userEmail
+            'userEmail' => $this->userEmail,
+            'piva'=>$this->piva,
+            'phone'=>$this->phone
         ]);
 
         Log::createLog('INVITE', $this->userName);
@@ -104,6 +116,8 @@ class InviteUserController extends Controller {
     public function storeRequestData() {
         $this->userName = Controller::request('name');
         $this->userEmail = Controller::request('email');
+        $this->piva=Controller::request('piva');
+        $this->phone=Controller::request('phone');
     }
 
     public function createNewUserAndRetrieveId() {
@@ -114,6 +128,8 @@ class InviteUserController extends Controller {
             'signupDate' => Date::getCurrentDate(),
             'tickets' => 0,
             'email' => $this->userEmail,
+            'piva' =>$this->piva,
+            'phone'=>$this->phone,
             'password' => Hashing::hashPassword(Hashing::generateRandomToken()),
             'verificationToken' => null,
             'xownCustomfieldvalueList' => $this->getCustomFieldValues()

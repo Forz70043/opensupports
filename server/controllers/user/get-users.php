@@ -63,6 +63,8 @@ class GetUsersController extends Controller {
                 'verified' => !$user->verificationToken,
                 'tickets' => $user->tickets,
                 'email' => $user->email,
+                'phone' =>$user->phone,
+                'piva' =>$user->piva,
                 'signupDate' => $user->signupDate,
                 'disabled' => !!$user->disabled
             ];
