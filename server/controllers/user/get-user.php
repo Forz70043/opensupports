@@ -60,6 +60,8 @@ class GetUserByIdController extends Controller {
         Response::respondSuccess([
             'name' => $user->name,
             'email' => $user->email,
+            'piva' => $user->piva,
+            'phone' => $user->phone,
             'signupDate' => $user->signupDate,
             'tickets' => $tickets->toArray(true),
             'verified' => !$user->verificationToken,

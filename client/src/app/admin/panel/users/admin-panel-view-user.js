@@ -250,6 +250,8 @@ class AdminPanelViewUser extends React.Component {
         this.setState({
             name: result.data.name,
             email: result.data.email,
+            piva: result.data.piva,
+            phone: result.data.phone,
             verified: result.data.verified,
             tickets: result.data.tickets,
             disabled: result.data.disabled,

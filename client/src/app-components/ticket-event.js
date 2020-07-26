@@ -91,23 +91,48 @@ class TicketEvent extends React.Component {
     renderComment() {
         const author = this.props.author;
         const customFields = (author && author.customfields) || [];
-
-        return (
-            <div className="ticket-event__comment">
-                <span className="ticket-event__comment-pointer" />
-                <div className="ticket-event__comment-author">
-                    <span className="ticket-event__comment-author-name">{this.props.author.name}</span>
-                    <span className="ticket-event__comment-badge-container">
-                        <span className="ticket-event__comment-badge">{i18n((this.props.author.staff) ? 'STAFF' : 'CUSTOMER')}</span>
-                    </span>
-                    {customFields.map(this.renderCustomFieldValue.bind(this))}
-                    {(this.props.private*1) ? this.renderPrivateBadge() : null}
+        
+        if(this.props.author.staff){
+            return (
+                <div className="ticket-event__comment">
+                    <span className="ticket-event__comment-pointer" />
+                    <div className="ticket-event__comment-author">
+                        <span className="ticket-event__comment-author-name">{this.props.author.name}</span>
+                        <span className="ticket-event__comment-badge-container">
+                            <span className="ticket-event__comment-badge">{i18n((this.props.author.staff) ? 'STAFF' : 'CUSTOMER')}</span>
+                        </span>
+                        {customFields.map(this.renderCustomFieldValue.bind(this))}
+                        {(this.props.private*1) ? this.renderPrivateBadge() : null}
+                    </div>
+                    <div className="ticket-event__comment-date">{DateTransformer.transformToString(this.props.date)}</div>
+                    {!this.props.edit ? this.renderContent() : this.renderEditField()}
+                    {this.renderFooter(this.props.file)}
                 </div>
-                <div className="ticket-event__comment-date">{DateTransformer.transformToString(this.props.date)}</div>
-                {!this.props.edit ? this.renderContent() : this.renderEditField()}
-                {this.renderFooter(this.props.file)}
-            </div>
-        );
+            );
+        }
+        else{
+            return (
+                <div className="ticket-event__comment">
+                    <span className="ticket-event__comment-pointer" />
+                    <div className="ticket-event__comment-author">
+                        <span className="ticket-event__comment-author-name">{this.props.author.name}</span>
+                        <span className="ticket-event__comment-badge-container">
+                            <span className="ticket-event__comment-badge">{i18n((this.props.author.staff) ? 'STAFF' : 'CUSTOMER')}</span>
+                        </span>
+                        <span className="ticket-event__comment-badge-container">
+                            <span className="ticket-event__comment-badge">
+                                Email: <span className="ticket-event__comment-badge-value">{this.props.author.email}</span>
+                            </span>
+                        </span>
+                        {customFields.map(this.renderCustomFieldValue.bind(this))}
+                        {(this.props.private*1) ? this.renderPrivateBadge() : null}
+                    </div>
+                    <div className="ticket-event__comment-date">{DateTransformer.transformToString(this.props.date)}</div>
+                    {!this.props.edit ? this.renderContent() : this.renderEditField()}
+                    {this.renderFooter(this.props.file)}
+                </div>
+            );
+        }
     }
 
     renderContent() {
