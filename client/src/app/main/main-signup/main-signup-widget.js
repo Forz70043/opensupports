@@ -45,8 +45,10 @@ class MainSignUpWidget extends React.Component {
                 <Header title={i18n('SIGN_UP')} description={i18n('SIGN_UP_VIEW_DESCRIPTION')} />
                 <Form {...this.getFormProps()}>
                     <div className="signup-widget__inputs">
-                        <FormField {...this.getInputProps()} label={i18n('FULL_NAME')} name="name" validation="NAME" required/>
+                        <FormField {...this.getInputProps()} label={i18n('R_SOCIALE')} name="name" validation="NAME" required/>
+                        <FormField {...this.getInputProps()} label={i18n('PIVA')} name="piva" validation="NAME" required/>
                         <FormField {...this.getInputProps()} label={i18n('EMAIL')} name="email" validation="EMAIL" required/>
+                        <FormField {...this.getInputProps()} label={i18n('PHONE_NUMBER')} name="phone" validation="NAME"/>
                         <FormField {...this.getInputProps(true)} label={i18n('PASSWORD')} name="password" validation="PASSWORD" required/>
                         <FormField {...this.getInputProps(true)} label={i18n('REPEAT_PASSWORD')} name="repeated-password" validation="REPEAT_PASSWORD" required/>
                         {this.state.customFields.map(this.renderCustomField.bind(this))}

@@ -19,6 +19,8 @@ class AdminPanelViewUser extends React.Component {
     state = {
         name: '',
         email: '',
+        piva: '',
+        phone: '',
         verified: true,
         tickets: [],
         customfields: [],
@@ -55,9 +57,23 @@ class AdminPanelViewUser extends React.Component {
             <div className="admin-panel-view-user__content">
                 <div className="admin-panel-view-user__info">
                     <div className="admin-panel-view-user__info-item">
-                        {i18n('NAME')}
+                        {i18n('R_SOCIALE')}
                         <div className="admin-panel-view-user__info-box">
                             {this.state.name}
+                            {(this.state.disabled) ? this.renderDisabled() : null}
+                        </div>
+                    </div>
+                    <div className="admin-panel-view-user__info-item">
+                        {i18n('PIVA')}
+                        <div className="admin-panel-view-user__info-box">
+                            {this.state.piva}
+                            {(this.state.disabled) ? this.renderDisabled() : null}
+                        </div>
+                    </div>
+                    <div className="admin-panel-view-user__info-item">
+                        {i18n('PHONE_NUMBER')}
+                        <div className="admin-panel-view-user__info-box">
+                            {this.state.phone}
                             {(this.state.disabled) ? this.renderDisabled() : null}
                         </div>
                     </div>

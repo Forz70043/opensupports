@@ -42,6 +42,7 @@ class CreateController extends Controller {
     const METHOD = 'POST';
 
     private $title;
+    private $ref_person;
     private $content;
     private $departmentId;
     private $language;
@@ -56,6 +57,10 @@ class CreateController extends Controller {
                 'title' => [
                     'validation' => DataValidator::notBlank()->length(1, 200),
                     'error' => ERRORS::INVALID_TITLE
+                ],
+                'ref_person' => [
+                    'validation' => DataValidator::notBlank()->length(1, 200),
+                    'error' => ERRORS::INVALID_REF_PERSON
                 ],
                 'content' => [
                     'validation' => DataValidator::content(),
@@ -100,6 +105,7 @@ class CreateController extends Controller {
         ///
 
         $this->title = Controller::request('title');
+        $this->ref_person = Controller::request('ref_person');
         $this->content = Controller::request('content', true);
         $this->departmentId = Controller::request('departmentId');
         $this->language = Controller::request('language');
@@ -183,6 +189,7 @@ class CreateController extends Controller {
 
         $ticket->setProperties(array(
             'title' => $this->title,
+            'ref_person' =>$this->ref_person,
             'content' => $this->replaceWithImagePaths($imagePaths, $this->content),
             'language' => $this->language,
             'department' => $department,

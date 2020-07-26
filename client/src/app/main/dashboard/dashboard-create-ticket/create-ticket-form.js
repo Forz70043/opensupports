@@ -36,6 +36,7 @@ class CreateTicketForm extends React.Component {
         message: null,
         form: {
             title: '',
+            ref_person: '',
             content: TextEditor.createEmpty(),
             departmentIndex: getPublicDepartmentIndexFromDepartmentId(this.props.defaultDepartmentId),
             email: '',
@@ -51,6 +52,7 @@ class CreateTicketForm extends React.Component {
                 <Form {...this.getFormProps()}>
                     {(!this.props.userLogged) ? this.renderEmailAndName() : null}
                     <FormField label={i18n('TITLE')} name="title" validation="TITLE" required field="input" fieldProps={{size: 'large'}}/>
+                    <FormField label={i18n('REF_PERSON')} name="ref_person" validation="TITLE" field="input" fieldProps={{size: 'large'}}/>
                     <div className="row">
                         {!(this.props.isDefaultDepartmentLocked*1) || this.props.isStaff ?
                             <FormField className="col-md-5" label={i18n('DEPARTMENT')} name="departmentIndex" field="select" decorator={DepartmentDropdown} fieldProps={{

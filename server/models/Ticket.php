@@ -33,6 +33,7 @@ class Ticket extends DataStore {
         return array(
             'ticketNumber',
             'title',
+            'ref_person',
             'content',
             'language',
             'department',
@@ -122,6 +123,7 @@ class Ticket extends DataStore {
         return [
             'ticketNumber' => $this->ticketNumber,
             'title' => $this->title,
+            'ref_person'=>$this->ref_person,
             'content' => $minimized ? strip_tags($this->content) : $this->content,
             'department' => [
                 'id' => $this->department->id,
