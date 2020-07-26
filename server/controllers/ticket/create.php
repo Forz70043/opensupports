@@ -58,10 +58,10 @@ class CreateController extends Controller {
                     'validation' => DataValidator::notBlank()->length(1, 200),
                     'error' => ERRORS::INVALID_TITLE
                 ],
-                'ref_person' => [
+                /*'ref_person' => [
                     'validation' => DataValidator::notBlank()->length(1, 200),
-                    'error' => ERRORS::INVALID_REF_PERSON
-                ],
+                    //'error' => ERRORS::INVALID_REF_PERSON
+                ],*/
                 'content' => [
                     'validation' => DataValidator::content(),
                     'error' => ERRORS::INVALID_CONTENT
@@ -189,7 +189,7 @@ class CreateController extends Controller {
 
         $ticket->setProperties(array(
             'title' => $this->title,
-            'ref_person' =>$this->ref_person,
+            'ref_person' => $this->ref_person,
             'content' => $this->replaceWithImagePaths($imagePaths, $this->content),
             'language' => $this->language,
             'department' => $department,
