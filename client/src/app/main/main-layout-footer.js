@@ -1,6 +1,7 @@
 import React              from 'react';
 import {connect}          from 'react-redux';
 import classNames         from 'classnames';
+import Icon               from 'core-components/icon';
 
 class MainLayoutFooter extends React.Component {
 
@@ -18,9 +19,10 @@ class MainLayoutFooter extends React.Component {
     renderExtraLinks() {
         return (
             <div className="main-layout-footer__extra-links">
-                <a className="main-layout-footer__extra-link" href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank"><span class="fa fa-linkedin"></span></a>
+                Customization powered by 
+                <a className="main-layout-footer__extra-link" href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank"><Icon name="linkedin"/></a>
                 <span> | </span>
-                <a className="main-layout-footer__extra-link" href="https://github.com/Forz70043" target="_blank"><span class="fa fa-github"></span></a>
+                <a className="main-layout-footer__extra-link" href="https://github.com/Forz70043" target="_blank"><Icon name="github"/></a>
             </div>
         );
     }
