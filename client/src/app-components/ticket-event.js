@@ -121,6 +121,11 @@ class TicketEvent extends React.Component {
                         </span>
                         <span className="ticket-event__comment-badge-container">
                             <span className="ticket-event__comment-badge">
+                                {i18n('REF_PERSON')}: <span className="ticket-event__comment-badge-value">{this.props.ref_person}</span>
+                            </span>
+                        </span>
+                        <span className="ticket-event__comment-badge-container">
+                            <span className="ticket-event__comment-badge">
                                 Email: <span className="ticket-event__comment-badge-value">{this.props.author.email}</span>
                             </span>
                         </span>
