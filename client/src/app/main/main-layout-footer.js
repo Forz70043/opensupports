@@ -19,8 +19,8 @@ class MainLayoutFooter extends React.Component {
     renderExtraLinks() {
         return (
             <div className="main-layout-footer__extra-links">
-                Customization powered by 
-                <a className="main-layout-footer__extra-link" href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank"><Icon name="linkedin"/></a>
+                Customization powered by    
+                 <a className="main-layout-footer__extra-link" href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank"> <Icon name="linkedin"/></a>
                 <span> | </span>
                 <a className="main-layout-footer__extra-link" href="https://github.com/Forz70043" target="_blank"><Icon name="github"/></a>
             </div>
