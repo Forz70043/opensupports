@@ -352,6 +352,7 @@ CREATE TABLE IF NOT EXISTS `ticket` (
   `unread_staff` tinyint(1) unsigned DEFAULT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ref_person` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `internal_phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` text COLLATE utf8mb4_unicode_ci,
   `language` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `file` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

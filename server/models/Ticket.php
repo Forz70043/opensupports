@@ -34,6 +34,7 @@ class Ticket extends DataStore {
             'ticketNumber',
             'title',
             'ref_person',
+            'internal_phone',
             'content',
             'language',
             'department',
@@ -124,6 +125,7 @@ class Ticket extends DataStore {
             'ticketNumber' => $this->ticketNumber,
             'title' => $this->title,
             'ref_person'=>$this->ref_person,
+            'internal_phone'=>$this->internal_phone,
             'content' => $minimized ? strip_tags($this->content) : $this->content,
             'department' => [
                 'id' => $this->department->id,
@@ -189,6 +191,8 @@ class Ticket extends DataStore {
                 'content'=> $ticketEvent->content,
                 'author' => [],
                 'date'=> $ticketEvent->date,
+                'ref_person'=>$ticketEvent->ref_person,
+                'internal_phone'=>$ticketEvent->internal_phone,
                 'file'=> $ticketEvent->file,
                 'private'=> $ticketEvent->private,
                 'edited' => $ticketEvent->editedContent,
@@ -196,6 +200,7 @@ class Ticket extends DataStore {
             ];
 
             $author = $ticketEvent->getAuthor();
+            error_log("XXX author :".print_r($author,1));
             if($author && !$author->isNull()) {
                 $event['author'] = [
                     'id'=> $author->id,

@@ -6,6 +6,7 @@ export default {
     'PIVA': 'P.Iva',
     'PHONE_NUMBER': 'N° Telefonico',
     'REF_PERSON': 'Persona di Riferimento',
+    'INTERNAL_PHONE': 'N° Interno',
     'ACCOUNT': 'Account',
     'SUBMIT': 'Invia',
     'EMAIL': 'Email',

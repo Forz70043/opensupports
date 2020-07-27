@@ -6,6 +6,7 @@ export default {
     'PIVA': 'Vat Num',
     'PHONE_NUMBER': 'Phone Num',
     'REF_PERSON': 'Reference Person',
+    'INTERNAL_PHONE': 'Internal Phone',
     'ACCOUNT': 'Account',
     'SUBMIT': 'Submit',
     'EMAIL': 'Email',

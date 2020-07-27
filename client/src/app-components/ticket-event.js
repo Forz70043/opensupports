@@ -115,13 +115,19 @@ class TicketEvent extends React.Component {
                 <div className="ticket-event__comment">
                     <span className="ticket-event__comment-pointer" />
                     <div className="ticket-event__comment-author">
-                        <span className="ticket-event__comment-author-name">{this.props.author.name}</span>
                         <span className="ticket-event__comment-badge-container">
-                            <span className="ticket-event__comment-badge">{i18n((this.props.author.staff) ? 'STAFF' : 'CUSTOMER')}</span>
+                            <span className="ticket-event__comment-badge">
+                                {i18n('CUSTOMER')}: <span className="ticket-event__comment-badge-value">{this.props.author.name}</span>
+                            </span>
                         </span>
                         <span className="ticket-event__comment-badge-container">
                             <span className="ticket-event__comment-badge">
                                 {i18n('REF_PERSON')}: <span className="ticket-event__comment-badge-value">{this.props.ref_person}</span>
+                            </span>
+                        </span>
+                        <span className="ticket-event__comment-badge-container">
+                            <span className="ticket-event__comment-badge">
+                                {i18n('INTERNAL_PHONE')}: <span className="ticket-event__comment-badge-value">{this.props.internal_phone}</span>
                             </span>
                         </span>
                         <span className="ticket-event__comment-badge-container">

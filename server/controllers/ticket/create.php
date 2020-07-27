@@ -43,6 +43,7 @@ class CreateController extends Controller {
 
     private $title;
     private $ref_person;
+    private $internal_phone;
     private $content;
     private $departmentId;
     private $language;
@@ -106,6 +107,7 @@ class CreateController extends Controller {
 
         $this->title = Controller::request('title');
         $this->ref_person = Controller::request('ref_person');
+        $this->internal_phone = Controller::request('internal_phone');
         $this->content = Controller::request('content', true);
         $this->departmentId = Controller::request('departmentId');
         $this->language = Controller::request('language');
@@ -190,6 +192,7 @@ class CreateController extends Controller {
         $ticket->setProperties(array(
             'title' => $this->title,
             'ref_person' => $this->ref_person,
+            'internal_phone' =>$this->internal_phone,
             'content' => $this->replaceWithImagePaths($imagePaths, $this->content),
             'language' => $this->language,
             'department' => $department,
