@@ -200,7 +200,6 @@ class Ticket extends DataStore {
             ];
 
             $author = $ticketEvent->getAuthor();
-            error_log("XXX author :".print_r($author,1));
             if($author && !$author->isNull()) {
                 $event['author'] = [
                     'id'=> $author->id,

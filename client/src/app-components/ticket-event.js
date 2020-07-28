@@ -91,7 +91,11 @@ class TicketEvent extends React.Component {
     renderComment() {
         const author = this.props.author;
         const customFields = (author && author.customfields) || [];
-        
+        const ref_person = this.props.ref_person;
+        const interno = this.props.internal_phone;
+        console.log(interno);
+        console.log(ref_person);
+
         if(this.props.author.staff){
             return (
                 <div className="ticket-event__comment">
