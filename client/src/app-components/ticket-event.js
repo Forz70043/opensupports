@@ -24,6 +24,8 @@ class TicketEvent extends React.Component {
         ]),
         author: React.PropTypes.object,
         content: React.PropTypes.string,
+        ref_person: React.PropTypes.string,
+        internal_phone: React.PropTypes.string,
         date: React.PropTypes.string,
         private: React.PropTypes.string,
         edited: React.PropTypes.bool,
@@ -91,10 +93,11 @@ class TicketEvent extends React.Component {
     renderComment() {
         const author = this.props.author;
         const customFields = (author && author.customfields) || [];
+        console.log("props: "); console.log(this.props);
         const ref_person = this.props.ref_person;
         const interno = this.props.internal_phone;
-        console.log(interno);
-        console.log(ref_person);
+        console.log("interno: "); console.log(interno);
+        console.log("ref_person:"); console.log(ref_person);
 
         if(this.props.author.staff){
             return (
