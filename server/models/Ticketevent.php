@@ -54,6 +54,8 @@ class Ticketevent extends DataStore {
         return [
             'type',
             'content',
+            'ref_person',
+            'internal_phone',
             'file',
             'authorUser',
             'authorStaff',
@@ -93,6 +95,8 @@ class Ticketevent extends DataStore {
         return [
             'type' => $this->type,
             'ticketNumber' => $this->ticket->ticketNumber,
+            'ref_person' =>$this->ticket->ref_person,
+            'internal_phone' =>$this->ticket->internal_phone,
             'author' => [
                 'name' => $user ? $user->name : $author['name'],
                 'staff' => $user instanceOf Staff,

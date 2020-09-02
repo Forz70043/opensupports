@@ -162,7 +162,7 @@ class TicketViewer extends React.Component {
     renderEditableHeaders() {
         const ticket = this.props.ticket;
         const departments = this.getDepartmentsForTransfer();
-
+        console.log("XXX props of editable Header");console.log(this.props);
         return (
             <div className="ticket-viewer__headers">
                 <div className="ticket-viewer__info">
@@ -215,7 +215,7 @@ class TicketViewer extends React.Component {
 
     renderHeaders() {
         const ticket = this.props.ticket;
-
+        console.log("this props: "); console.log(this.props);
         return (
             <div className="ticket-viewer__headers">
                 <div className="ticket-viewer__info">
